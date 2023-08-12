@@ -48,7 +48,7 @@ class CaixaDaLanchonete {
             default:
                 return "Forma de pagamento inválida!";
         }
-        console.log("R$ " + valorCompra.replace('.', ','))
+        
         return "R$ " + valorCompra.replace('.', ',');
     }
 
@@ -79,6 +79,5 @@ class CaixaDaLanchonete {
 }
 
 
-new CaixaDaLanchonete().calcularValorDaCompra('debito', ['cafe,1', 'queijo,1'])
 export { CaixaDaLanchonete };
 
