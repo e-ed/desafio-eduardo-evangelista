@@ -54,6 +54,7 @@ class CaixaDaLanchonete {
 
     validaCompra(arrayItens, cardapio) {
         for (let i = 0; i < arrayItens.length; i++) {
+            try {
             if (cardapio.isExtra(arrayItens[i])) {
                 switch (arrayItens[i]) {
                     case "queijo":
@@ -68,6 +69,9 @@ class CaixaDaLanchonete {
                         break;
                 }
             }
+        } catch (TypeError) {
+            return "Item inválido!"
+        }
         }
         return true;
     }
